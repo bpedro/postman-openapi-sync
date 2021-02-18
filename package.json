@@ -1,0 +1,22 @@
+{
+  "name": "postman-openapi-sync",
+  "version": "0.1.0",
+  "description": "Postman OpenAPI sync makes sure that your local OpenAPI spec is in sync with Postman.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "postman",
+    "api",
+    "openapi",
+    "sync"
+  ],
+  "author": "Bruno Pedro <bpedro@brunopedro.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@apidevtools/swagger-parser": "^10.0.2",
+    "axios": "^0.21.1",
+    "yaml": "^1.10.0"
+  }
+}
