@@ -15,7 +15,7 @@ const postman = new Postman(
 
 (async() => {
   try {
-    const localAPI = await SwaggerParser.parse('example_oas.yaml');
+    const localAPI = await SwaggerParser.parse(args[0]);
 
     // Obtain a remote representation of the API
     // defined by the local OpenAPI specification.
@@ -40,7 +40,8 @@ const postman = new Postman(
     // defined by the local OpenAPI specification.
     let remoteAPIVersion = await postman.apiVersions(remoteAPI.id, version => version.name == localAPI.info.version);
     if (!remoteAPIVersion.length) {
-      remoteAPIVersion = await postman.createAPIVersion(remoteAPI.id, localAPI.info.version); 
+      remoteAPIVersion = await postman.createAPIVersion(remoteAPI.id, localAPI.info.version);
+      remoteAPIVersion.schema = [];
     } else {
       remoteAPIVersion = await postman.apiVersion(remoteAPI.id, remoteAPIVersion[0].id);
     }
