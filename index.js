@@ -1,6 +1,12 @@
 const SwaggerParser = require('@apidevtools/swagger-parser');
 const Postman = require('./lib/postman-sdk');
 
+const args = process.argv.slice(2);
+if (!args.length) {
+  console.error('usage: postman-openapi-sync openapi_file');
+  process.exit(0);
+}
+
 const postman = new Postman(
   process.env.POSTMAN_API_KEY,
   process.env.POSTMAN_WORKSPACE_ID
