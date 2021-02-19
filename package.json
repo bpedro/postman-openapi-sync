@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "postman-openapi-sync": "./index.js"
+  },
   "keywords": [
     "postman",
     "api",

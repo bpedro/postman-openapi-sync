@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const SwaggerParser = require('@apidevtools/swagger-parser');
 const Postman = require('./lib/postman-sdk');
 
