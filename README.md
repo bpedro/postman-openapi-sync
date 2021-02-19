@@ -2,6 +2,16 @@
 
 Postman OpenAPI sync makes sure that your local OpenAPI spec is in sync with Postman. It does that by using your local OpenAPI spec as the source of truth and synchronizing its contents with Postman.
 
+## Installing
+
+To install `postman-openapi-sync` simply clone this repository and then run:
+
+```
+npm install -g
+```
+
+`postman-openapi-sync` will be installed globally on your system.
+
 ## Running
 
 To run `postman-api-sync` you must first create two environment variables:
@@ -12,7 +22,7 @@ To run `postman-api-sync` you must first create two environment variables:
 Then, you can simply run:
 
 ```
-node ./index.js <openapi_file>
+postman-openapi-sync <openapi_file>
 ```
 
 Where `openapi_file` is your local OpenAPI specification file.
